@@ -2,7 +2,13 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Wallet from "@harmonicpool/cardano-wallet-interface";
+import dynamic from 'next/dynamic';
+
+const WalletConnector = dynamic(
+  () => import('../components/WalletConnector'), {
+  ssr: false,
+});
+
 
 
 const Home: NextPage = ({ close, connect }: any) => {
@@ -21,27 +27,6 @@ const Home: NextPage = ({ close, connect }: any) => {
   // check if wallet is connected
 
   // connect nami wallet
-  const connectNami = async () => {
-    if (Wallet.has(Wallet.Names.Nami)) {
-      if (!await Wallet.isEnabled(Wallet.Names.Nami)) {
-        Wallet.enable(Wallet.Names.Nami)
-          .then(
-            () => {
-              Wallet.Nami.delegateTo(
-                "pool1kff7xes9u3da29ghwmhd8074t9874mejdqjvyjzseu0xs396p2m",
-                "mainnetsqiGxd2Tup4isYQR01Yco3TSC6mvHraC"
-              );
-            }
-          );
-      }
-      else {
-        Wallet.Nami.delegateTo(
-          "pool1kff7xes9u3da29ghwmhd8074t9874mejdqjvyjzseu0xs396p2m",
-          "mainnetsqiGxd2Tup4isYQR01Yco3TSC6mvHraC"
-        );
-      }
-    }
-  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -61,9 +46,9 @@ const Home: NextPage = ({ close, connect }: any) => {
 
 
         <button
-          onClick={() => connectNami()}
+          onClick={() => WalletConnector}
           className='w-48 mt-8 text-white bg-blue-500 shadow-xl h-14 rounded-xl hover:scale-95'>
-          Connect wallet
+          Connect Nami
         </button>
 
 
