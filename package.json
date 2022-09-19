@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emurgo/cardano-serialization-lib-nodejs": "^11.0.5",
+    "@harmonicpool/cardano-wallet-interface": "https://github.com/HarmonicPool/cardano-wallet-interface",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0"

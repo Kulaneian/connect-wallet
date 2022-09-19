@@ -2,6 +2,23 @@
 # yarn lockfile v1
 
 
+"@emurgo/cardano-serialization-lib-asmjs@^10.0.4":
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-asmjs/-/cardano-serialization-lib-asmjs-10.2.0.tgz#460b7dee0a1e6e365a598c31d30cf8226684e76a"
+  integrity sha512-AHUGIQ4RBaaQiaz8+NeN7yEtu8PgKtIKp5j1cIivRFjyA0kKTxmDkrMuTBpMZqhADWrvUf6cnKw5Tzwqzg26MQ==
+
+"@emurgo/cardano-serialization-lib-nodejs@^11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-nodejs/-/cardano-serialization-lib-nodejs-11.0.5.tgz#3563c9fdc9ec9e0e71f8a75f3d7d9a872bf96661"
+  integrity sha512-6SBlRunFMLj9sC3YmMuJzPW0lY6MYOwMKft+/lkUtZPgUWsyzi7+d24iS3E2ThPDY1seS43dzHwZAeZxBH5KkQ==
+
+"@harmonicpool/cardano-wallet-interface@https://github.com/HarmonicPool/cardano-wallet-interface":
+  version "1.6.2"
+  resolved "https://github.com/HarmonicPool/cardano-wallet-interface#3b9451fcaf7fc79bc9e8b56f227b42657d69a21c"
+  dependencies:
+    "@emurgo/cardano-serialization-lib-asmjs" "^10.0.4"
+    buffer "^6.0.3"
+
 "@next/env@12.3.0":
   version "12.3.0"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.3.0.tgz#85f971fdc668cc312342761057c59cb8ab1abadf"
@@ -184,6 +201,11 @@ autoprefixer@^10.4.7:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
+base64-js@^1.3.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
+  integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
@@ -205,6 +227,14 @@ browserslist@^4.21.3:
     electron-to-chromium "^1.4.251"
     node-releases "^2.0.6"
     update-browserslist-db "^1.0.9"
+
+buffer@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-6.0.3.tgz#2ace578459cc8fbe2a70aaa8f52ee63b6a74c6c6"
+  integrity sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==
+  dependencies:
+    base64-js "^1.3.1"
+    ieee754 "^1.2.1"
 
 camelcase-css@^2.0.1:
   version "2.0.1"
@@ -340,6 +370,11 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+ieee754@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
+  integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
 is-binary-path@~2.1.0:
   version "2.1.0"
