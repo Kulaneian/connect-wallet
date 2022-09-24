@@ -12,29 +12,7 @@ const WalletConnector = dynamic(() => import('../components/WalletConnector'), {
 
 const Home: NextPage = ({close, connect}:any) => {
   
-    /* connect nami wallet
-    const connectNami = async () => {
-      if (Wallet.has(Wallet.Names.Nami)) {
-        if (!await Wallet.isEnabled(Wallet.Names.Nami)) {
-          Wallet.enable(Wallet.Names.Nami)
-            .then(
-              () => {
-                Wallet.Nami.delegateTo(
-                  "pool1kff7xes9u3da29ghwmhd8074t9874mejdqjvyjzseu0xs396p2m",
-                  "mainnetsqiGxd2Tup4isYQR01Yco3TSC6mvHraC"
-                );
-              }
-            );
-        }
-        else {
-          Wallet.Nami.delegateTo(
-            "pool1kff7xes9u3da29ghwmhd8074t9874mejdqjvyjzseu0xs396p2m",
-            "mainnetsqiGxd2Tup4isYQR01Yco3TSC6mvHraC"
-          );
-        }
-      }
-    }
-   */
+    
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
